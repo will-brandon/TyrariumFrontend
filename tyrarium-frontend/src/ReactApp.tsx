@@ -6,7 +6,7 @@ import SimpleTerrariumScene from './scene/SimpleTerrariumScene';
 const ReactApp = (): JSX.Element => {
   return (
     <div className='react-app'>
-      <R3FCanvas>
+      <R3FCanvas shadows>
         <SimpleTerrariumScene />
       </R3FCanvas>
     </div>

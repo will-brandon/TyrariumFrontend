@@ -54,6 +54,8 @@ const SimpleStoneMesh = ({
       position={position}
       rotation={rotation}
       geometry={geometry}
+      castShadow
+      receiveShadow
     >
       <meshStandardMaterial color={color} />
     </mesh>

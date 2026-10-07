@@ -56,6 +56,7 @@ const SimpleSandMesh = ({
       position={position}
       geometry={geometry}
       rotation={[-Math.PI / 2, 0, 0]}
+      receiveShadow
     >
       <meshStandardMaterial color={color} />
     </mesh>

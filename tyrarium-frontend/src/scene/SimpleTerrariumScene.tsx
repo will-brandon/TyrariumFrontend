@@ -9,7 +9,12 @@ const SimpleTerrariumScene = (): JSX.Element => (
     <color attach='background' args={['#03001d']} />
     <PerspectiveCamera position={[2, 3, 5]} makeDefault />
     <OrbitControls />
-    <pointLight position={[15, 40, -13]} intensity={8_000} />
+    <pointLight
+      position={[15, 40, -13]}
+      intensity={8_000}
+      castShadow
+      shadow-mapSize={[4096, 4096]}
+    />
     <SimpleSandMesh position={[0, 0.7, 0]} width={100} height={70} cellSize={0.2} />
     <SimpleWaterSurfaceMesh position={[0, 0, 0]} width={100} height={70} cellSize={0.2} />
     {

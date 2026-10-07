@@ -53,12 +53,13 @@ const SimpleWaterSurfaceMesh = ({
       position={position}
       geometry={geometry}
       rotation={[-Math.PI / 2, 0, 0]}
+      castShadow
     >
-      <meshStandardMaterial
-        roughness={0}
-        color={'#444444'}
-        transparent
-        opacity={0.3}
+      <meshPhysicalMaterial
+        color='#ffffff'
+        transmission={1}
+        roughness={0.1}
+        ior={1.333}
       />
     </mesh>
   );
