@@ -1,14 +1,23 @@
+import type { Color as R3FColor, Vector3 } from '@react-three/fiber';
 import { useMemo, type JSX } from 'react';
 import { createNoise2D } from 'simplex-noise';
 import { PlaneGeometry } from 'three';
 
 interface SimpleSandMeshProps {
+  position?: Vector3;
   width?: number;
   height?: number;
   cellSize?: number;
+  color?: R3FColor;
 }
 
-const SimpleSandMesh = ({ width = 1, height = 1, cellSize = 1 }: SimpleSandMeshProps): JSX.Element => {
+const SimpleSandMesh = ({
+  position = [0, 0, 0],
+  width = 1,
+  height = 1,
+  cellSize = 1,
+  color = '#C2B280',
+}: SimpleSandMeshProps): JSX.Element => {
   const geometry = useMemo(() => {
     if (!Number.isInteger(width / cellSize) || !Number.isInteger(height / cellSize)) {
       throw new Error(`Width and height must be multiples of cellSize. Got width=${width}, height=${height}, cellSize=${cellSize}.`);
@@ -36,6 +45,7 @@ const SimpleSandMesh = ({ width = 1, height = 1, cellSize = 1 }: SimpleSandMeshP
       positionAttribs.setZ(i, z);
     }
 
+    positionAttribs.needsUpdate = true;
     geometry.computeVertexNormals();
 
     return geometry;
@@ -43,10 +53,11 @@ const SimpleSandMesh = ({ width = 1, height = 1, cellSize = 1 }: SimpleSandMeshP
 
   return (
     <mesh
+      position={position}
       geometry={geometry}
       rotation={[-Math.PI / 2, 0, 0]}
     >
-      <meshStandardMaterial color={'#C2B280'} />
+      <meshStandardMaterial color={color} />
     </mesh>
   );
 }
