@@ -1,0 +1,8 @@
+div.react-app, div.react-app canvas
+{
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

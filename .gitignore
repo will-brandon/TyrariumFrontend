@@ -1,0 +1,9 @@
+# NPM Build/Caches
+/*/node_modules/
+/*/dist/
+
+# OS Metadata/Caches
+**/.DS_Store
+
+# IDE Metadata/Caches
+**/.vscode/
