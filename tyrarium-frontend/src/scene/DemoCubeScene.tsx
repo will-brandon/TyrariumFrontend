@@ -2,7 +2,7 @@ import type { JSX } from 'react/jsx-dev-runtime';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { type Color as R3FColor } from '@react-three/fiber';
 import { toTHREEColor } from '../util/colorUtils';
-import DemoCubeFieldMesh from '../mesh/DemoCubeFieldMesh';
+import DemoCubeFieldMesh from '../mesh/demo/DemoCubeFieldMesh';
 
 interface DemoCubeSceneProps {
   backgroundColor?: R3FColor;
