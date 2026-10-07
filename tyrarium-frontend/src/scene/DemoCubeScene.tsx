@@ -1,22 +1,22 @@
 import type { JSX } from 'react/jsx-dev-runtime';
-import DemoCubeMesh from '../mesh/DemoCubeMesh';
-import { OrbitControls } from '@react-three/drei';
-import type { Color as R3FColor } from '@react-three/fiber';
-import { toTHREEColorRepresentation } from '../util/colorUtils';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { type Color as R3FColor } from '@react-three/fiber';
+import { toTHREEColor } from '../util/colorUtils';
+import DemoCubeFieldMesh from '../mesh/DemoCubeFieldMesh';
 
 interface DemoCubeSceneProps {
   backgroundColor?: R3FColor;
 }
 
-const DemoCubeScene = ({ backgroundColor = '#00f000' }: DemoCubeSceneProps): JSX.Element => {
-  return (
-    <>
-      <color attach='background' args={[toTHREEColorRepresentation(backgroundColor)]} />
-      <OrbitControls />
-      <pointLight position={[10, 8, 3]} intensity={100} />
-      <DemoCubeMesh />
-    </>
-  );
-};
+const DemoCubeScene = ({ backgroundColor = '#000000' }: DemoCubeSceneProps): JSX.Element => (
+  <>
+    <color attach='background' args={[toTHREEColor(backgroundColor)]} />
+    <PerspectiveCamera position={[2, 3, 5]} makeDefault />
+    <OrbitControls />
+    <ambientLight intensity={0.5} />
+    <pointLight position={[30, 20, 3]} intensity={1_000} />
+    <DemoCubeFieldMesh />
+  </>
+);
 
 export default DemoCubeScene;

@@ -19,6 +19,6 @@ const main = (): void => {
       <ReactApp />
     </ReactStrictMode>,
   );
-}
+};
 
 main();

@@ -11,6 +11,6 @@ const ReactApp = (): JSX.Element => {
       </R3FCanvas>
     </div>
   );
-}
+};
 
 export default ReactApp;

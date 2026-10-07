@@ -1,15 +1,15 @@
 import type { Color as R3FColor } from '@react-three/fiber';
-import { Color as THREEColor, type ColorRepresentation as THREEColorRepresentation } from 'three';
+import { Color as THREEColor } from 'three';
 
-export const toTHREEColorRepresentation = (r3fColor: R3FColor): THREEColorRepresentation => {
+export const toTHREEColor = (r3fColor: R3FColor): THREEColor => {
   // Individually all three possible variations of the type union:
   //  1. THREEColorRepresentation
   //  2. [color: THREEColorRepresentation]
   //  3. [r: number, g: number, b: number]
 
-  // 1. If r3fColor is not an array, it is already a THREEColorRepresentation.
+  // 1. If r3fColor is not an array, it is already a THREEColorRepresentation, simply construct the THREEColor.
   if (!Array.isArray(r3fColor)) {
-    return r3fColor;
+    return new THREEColor(r3fColor);
   }
 
   // 2. If the array has one element, it is a THREEColorRepresentation.
