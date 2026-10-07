@@ -3,7 +3,7 @@ import { useMemo, type JSX } from 'react';
 import { createNoise3D } from 'simplex-noise';
 import { PlaneGeometry } from 'three';
 
-interface SimpleWaterSurfaceMeshProps {
+export interface SimpleWaterSurfaceMeshProps {
   position?: Vector3;
   width?: number;
   height?: number;

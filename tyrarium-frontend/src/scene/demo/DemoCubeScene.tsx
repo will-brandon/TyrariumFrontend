@@ -4,7 +4,7 @@ import { type Color as R3FColor } from '@react-three/fiber';
 import { toTHREEColor } from '../../util/colorUtils';
 import DemoCubeFieldMesh from '../../mesh/demo/DemoCubeFieldMesh';
 
-interface DemoCubeSceneProps {
+export interface DemoCubeSceneProps {
   backgroundColor?: R3FColor;
 }
 

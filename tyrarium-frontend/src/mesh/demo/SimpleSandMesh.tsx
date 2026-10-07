@@ -3,7 +3,7 @@ import { useMemo, type JSX } from 'react';
 import { createNoise2D } from 'simplex-noise';
 import { PlaneGeometry } from 'three';
 
-interface SimpleSandMeshProps {
+export interface SimpleSandMeshProps {
   position?: Vector3;
   width?: number;
   height?: number;

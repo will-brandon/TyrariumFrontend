@@ -3,7 +3,7 @@ import { useMemo, type JSX } from 'react';
 import { createNoise3D } from 'simplex-noise';
 import { IcosahedronGeometry, Vector3 as THREEVector3 } from 'three';
 
-interface SimpleStoneMeshProps {
+export interface SimpleStoneMeshProps {
   position?: R3FVector3;
   rotation?: R3FEuler;
   size?: number;
