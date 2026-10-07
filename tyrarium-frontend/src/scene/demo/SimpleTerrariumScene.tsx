@@ -1,8 +1,8 @@
 import type { JSX } from 'react';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
-import SimpleSandMesh from '../mesh/demo/SimpleSandMesh';
-import SimpleStoneMesh from '../mesh/demo/SimpleStoneMesh';
-import SimpleWaterSurfaceMesh from '../mesh/demo/SimpleWaterSurfaceMesh';
+import SimpleSandMesh from '../../mesh/demo/SimpleSandMesh';
+import SimpleStoneMesh from '../../mesh/demo/SimpleStoneMesh';
+import SimpleWaterSurfaceMesh from '../../mesh/demo/SimpleWaterSurfaceMesh';
 
 const SimpleTerrariumScene = (): JSX.Element => (
   <>

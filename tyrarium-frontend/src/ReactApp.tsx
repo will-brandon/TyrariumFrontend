@@ -1,7 +1,7 @@
 import { Canvas as R3FCanvas } from '@react-three/fiber';
 import './ReactApp.css'
 import type { JSX } from 'react/jsx-dev-runtime';
-import SimpleTerrariumScene from './scene/SimpleTerrariumScene';
+import SimpleTerrariumScene from './scene/demo/SimpleTerrariumScene';
 
 const ReactApp = (): JSX.Element => {
   return (
