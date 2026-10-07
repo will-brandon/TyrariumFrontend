@@ -40,7 +40,7 @@ const SimpleSandMesh = ({
       const noise1Sample = noise1(x * cellSize * 10, y * cellSize * 10) * 0.1;
       const noise2Sample = noise2(x * cellSize * 1, y * cellSize * 1) * 0.3;
       const noise3Sample = noise3(x * cellSize * 0.1, y * cellSize * 0.1) * 3;
-      const noise4Sample = noise4(x * cellSize * 0.01, y * cellSize * 0.01) * 10;
+      const noise4Sample = noise4(x * cellSize * 0.005, y * cellSize * 0.005) * 20;
       const z = noise1Sample + noise2Sample + noise3Sample + noise4Sample;
       positionAttribs.setZ(i, z);
     }
